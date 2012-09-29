@@ -1,0 +1,35 @@
+<html>
+  <head>
+      <title>Carson TodoList</title>  
+      <script type="text/javascript" >
+       function ctladdElement() {
+         
+         //We need to create an input element first and add the type checkbox to it
+         var htmlelement = document.createElement("INPUT");
+         htmlelement.type = 'checkbox';
+         
+         
+         //After we create the element we need to add it to the existing form which we identify by the id
+         var toDolistForm = document.getElementById("todolist");
+         toDolistForm.appendChild(htmlelement);
+         
+         //Adding the text for the checkboxes.
+         var addText = document.createTextNode("Hello World");
+         toDolistForm.appendChild(addText);
+  
+  
+         //Adding the line break for the checkbox elements  
+         var addBreak = document.createElement("br");
+         toDolistForm.appendChild(addBreak);
+
+       
+       } 
+      </script>
+  </head>
+  <body>
+    <form id="todolist" method="post" >
+      <input type="checkbox" value="Test" name="todolist" id="todolist1">Hello World</input><br>
+    </form>
+    <button type="button" onclick="ctladdElement()">Add Item</button>
+  </body>
+</html>
